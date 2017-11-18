@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="utf-8"?>
-<android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
-    android:orentation="vertical">
+    android:orientation="vertical">
 
 
     <android.support.v7.widget.CardView
@@ -30,11 +30,23 @@
                 android:id="@+id/description"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:text="Description ( vid#3 Simplfied Coding)"
+                android:text="Description"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            <TextView
+                android:id="@+id/urlimage"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Image"
+                android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
+            <TextView
+                android:id="@+id/review"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Review"
                 android:textAppearance="@style/Base.TextAppearance.AppCompat.Medium" />
 
         </LinearLayout>
 
     </android.support.v7.widget.CardView>
 
-</android.support.constraint.ConstraintLayout>
+</LinearLayout>

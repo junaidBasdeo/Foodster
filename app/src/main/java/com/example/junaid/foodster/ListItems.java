@@ -10,7 +10,8 @@ public class ListItems {
     private String urlImage;
     private String reviewSample;
 
-    public ListItems(String head, String description, String url, String reviewSample) {
+    public ListItems(String head, String description, String url,
+                     String reviewSample) {
         this.head = head;
         this.Description = description;
         this.urlImage = url;

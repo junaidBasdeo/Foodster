@@ -48,6 +48,8 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
         public TextView header;
         public TextView description;
+        public TextView urlimage;
+        public TextView review;
 
 
         public ViewHolder(View itemView) {
@@ -55,6 +57,9 @@ public class DataAdapter extends RecyclerView.Adapter<DataAdapter.ViewHolder> {
 
             header = (TextView) itemView.findViewById(R.id.header);
             description=(TextView) itemView.findViewById(R.id.description);
+            review =(TextView) itemView.findViewById(R.id.review);
+            urlimage=(TextView) itemView.findViewById(R.id.urlimage);
+
         }
     }
 
