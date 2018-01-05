@@ -1,10 +1,11 @@
-package com.example.junaid.foodster;;
+package com.example.junaid.foodster;
 
 import android.content.ContentValues;
 import android.content.Context;
 import android.database.Cursor;
 import android.database.SQLException;
 import android.database.sqlite.SQLiteDatabase;
+import android.util.Log;
 
 
 public class DatabaseController {
@@ -29,17 +30,36 @@ public class DatabaseController {
     }
 
     public void insert(String firstname, String lastname, String email, String username, String password) {
-        ContentValues values = new ContentValues();
-        values.put(DatabaseHelper.COLUMN_FIRSTNAME, firstname);
-        values.put(DatabaseHelper.COLUMN_LASTNAME, lastname);
-        values.put(DatabaseHelper.COLUMN_EMAIL, email);
-        values.put(DatabaseHelper.COLUMN_UNAME, username);
-        values.put(DatabaseHelper.COLUMN_PASS, password);
+        try {
+            ContentValues values = new ContentValues();
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_FIRSTNAME, firstname);
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_LASTNAME, lastname);
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_EMAIL, email);
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_UNAME, username);
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_PASS, password);
+            // need to insert the DB
+            database.insert(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, null, values);
+        } catch (Exception e) {
+            Log.e("Info",  "Exception Generated in method adduser insert " + e.getMessage() + " Exception Type : " + e.getClass().toString());
+
+        }   }
+
+    public void insertAdmin(String username, String password) {
+        try {
+            ContentValues values = new ContentValues();
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_UNAME, username);
+            values.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_PASS, password);
+            // need to insert the DB
+            database.insert(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, null, values);
+        } catch (Exception e) {
+            Log.e("Info",  "Exception Generated in method adduser insertAdmin " + e.getMessage() + " Exception Type : " + e.getClass().toString());
+
+        }
     }
 
     public Cursor query() {
-        String[] columns = new String[] { DatabaseHelper.COLUMN_UNAME, DatabaseHelper.COLUMN_PASS };
-        Cursor cursor = database.query(DatabaseHelper.TABLE_NAME, columns, null,
+        String[] columns = new String[] {com.example.junaid.foodster.DatabaseHelper.COLUMN_UNAME, com.example.junaid.foodster.DatabaseHelper.COLUMN_PASS};
+        Cursor cursor = database.query(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, columns, null,
                 null, null, null, null);
         if (cursor != null) {
             cursor.moveToFirst();
@@ -57,20 +77,26 @@ public class DatabaseController {
     }
     public int update(long username, String password, long ID) {
         ContentValues contentValues = new ContentValues();
-        contentValues.put(DatabaseHelper.COLUMN_UNAME, username);
-        contentValues.put(DatabaseHelper.COLUMN_PASS, password);
-        int i = database.update(DatabaseHelper.TABLE_NAME, contentValues,
-                DatabaseHelper.COLUMN_ID + " = " + ID, null);
+        contentValues.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_UNAME, username);
+        contentValues.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_PASS, password);
+        int i = database.update(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, contentValues,
+                com.example.junaid.foodster.DatabaseHelper.COLUMN_ID + " = " + ID, null);
         return i;
     }
 
+    public int update(long user_id, String name, String password) {
+        ContentValues contentValues = new ContentValues();
+        contentValues.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_UNAME, name);
+        contentValues.put(com.example.junaid.foodster.DatabaseHelper.COLUMN_PASS, password);
+        int i = database.update(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, contentValues,
+                com.example.junaid.foodster.DatabaseHelper.COLUMN_ID + " = " + user_id, null);
+        return i;
+    }
     public void delete(long ID) {
-        database.delete(DatabaseHelper.TABLE_NAME, DatabaseHelper.COLUMN_ID + "=" + ID, null);
+        database.delete(com.example.junaid.foodster.DatabaseHelper.TABLE_NAME, com.example.junaid.foodster.DatabaseHelper.COLUMN_ID + "=" + ID, null);
     }
     public void startOver(DatabaseController db) {
-        db.rawQuery("DROP TABLE IF EXISTS " + DatabaseHelper.TABLE_NAME);
-        DatabaseHelper.createTheDB(database);
-
+        db.rawQuery("DROP TABLE IF EXISTS " + com.example.junaid.foodster.DatabaseHelper.TABLE_NAME);
     }
 
 

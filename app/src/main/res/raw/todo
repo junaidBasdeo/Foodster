@@ -1,0 +1,91 @@
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+ToDo
+--------------------------------------------------------------------------------------------------------------
+Need a Hotest Restaurant list or Newest add for main page prior to login to entice user login
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+
+Done
+--------------------------------------------------------------------------------------------------------------
+Implement the menu selection actions
+    Implemented all except refresh restaurant data so far
+    this will depend on the API calling
+
+Add signup button to login screen (for changed mind)
+
+Add signin button to singup screen (for changed mind)
+
+Test the YELP API implementation
+
+Figure out how to wire up our Response Model to the Restaurant view
+
+Add exit menu to dot menu
+
+Need Change Password
+    Added activity
+    Added layout
+
+Need Change User Type
+    Added activity
+    Added layout
+
+Need Handling for creation of DB so there is a default admin user created
+    Added code
+
+Need to use of Globals to depend on
+    Added clss to host Globals
+
+Need search results
+    Should send to restaurant view
+
+Restaurant class named wrong
+    Renamed
+
+Need user type
+    Added user type table and handling in the application
+
+Need to control so only admin has access to the actions admin deserve
+    Added admin for menu control
+
+Need a way to track Logged in user that I can understand
+    Added tracking to login function, signup and special login page
+    Added logged in user to application Globals
+
+Need menu to launch the controls for an admin.   Will need to login as admin to see these.  Initally as the default admin.
+    This is done  Menu added
+
+Implement Global handling into the classes that need it
+    This was added to each class as a static instance get
+
+Need to add more logging
+    Added a lot of error logs to logcat with error type
+
+Need search activity
+    Created YelpSearchActivity (default goto if logged in on Main and after signup)
+
+Need search Layout
+    Created yelp_search
+
+Change Cancel at Login to exit app
+    Done
+
+Setup DatabaseContext class for DB creation location tracking
+    Created DatabaseContext classs
+
+Make signup rediret to search instead of restaurant list
+    Done
+
+Need API class to talk to restaurant review API
+    Created Yelp class with YelpAPI2 supporting class
+    Done for gettting business data
+
+
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+--------------------------------------------------------------------------------------------------------------
+

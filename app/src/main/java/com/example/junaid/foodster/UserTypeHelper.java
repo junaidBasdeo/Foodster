@@ -8,30 +8,29 @@ import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-
 import java.io.File;
 
-public class DatabaseHelper extends SQLiteOpenHelper {
+public class UserTypeHelper extends SQLiteOpenHelper {
 
-    private static final int DATABASE_VERSION = 1;
-    public static final String DATABASE_NAME = "users.db";
-    public static final String TABLE_NAME = "Users";
-    public static final String COLUMN_FIRSTNAME = "fname";
-    public static final String COLUMN_LASTNAME = "lname";
-    public static final String COLUMN_EMAIL = "email";
-    public static final String COLUMN_UNAME = "username";
-    public static final String COLUMN_PASS = "password";
-    public static final String COLUMN_ID = "ID";
+    // Table Name
+    public static final String TABLE_NAME = "USERTYPE";
+
+    // Table columns
+    public static final String USERTYPE_ID = "UserType_id";
+    public static final String USERTYPE_NAME = "UserType_name";
+    public static final String USER_TYPE = "User_Type";
+    // Database Information
+    static final String DB_NAME = "users.db";
 
     // database version
     static final int DB_VERSION = 1;
 
-    public boolean doesDatabaseExist(Context passedContext) {
-        File dbFile = passedContext.getDatabasePath(DATABASE_NAME);
+    public  boolean doesDatabaseExist(Context passedContext) {
+        File dbFile = passedContext.getDatabasePath(DB_NAME);
         return dbFile.exists();
     }
 
-    public boolean doesTableExist(DatabaseController db) {
+    public  boolean doesTableExist(UserTypeController db) {
         Cursor cursor = db.rawQuery("select DISTINCT tbl_name from sqlite_master where tbl_name = '" + TABLE_NAME + "'");
 
         if (cursor != null) {
@@ -52,12 +51,11 @@ public class DatabaseHelper extends SQLiteOpenHelper {
 
 
     // Creating table query
-    private  final String CREATE_TABLE = "create table " + TABLE_NAME + " (" + COLUMN_ID
-            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + COLUMN_FIRSTNAME + " TEXT, " + COLUMN_LASTNAME + " TEXT, "
-            + COLUMN_EMAIL + " TEXT, " + COLUMN_UNAME + " TEXT NOT NULL, " + COLUMN_PASS + " TEXT NOT NULL)";
+    private  final String CREATE_TABLE = "create table " + TABLE_NAME + "(" + USERTYPE_ID
+            + " INTEGER PRIMARY KEY AUTOINCREMENT, " + USERTYPE_NAME + " TEXT NOT NULL, " + USER_TYPE + " TEXT NOT NULL);";
 
-    public DatabaseHelper(Context context) {
-        super(new DatabaseContext(context), DATABASE_NAME, null, DATABASE_VERSION);
+    public UserTypeHelper(Context context) {
+        super(context, DB_NAME, null, DB_VERSION);
     }
 
     @Override
@@ -70,5 +68,4 @@ public class DatabaseHelper extends SQLiteOpenHelper {
         db.execSQL("DROP TABLE IF EXISTS " + TABLE_NAME);
         onCreate(db);
     }
-
 }

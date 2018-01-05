@@ -3,7 +3,7 @@ package com.example.junaid.foodster;
 /**
  * Created by Junaid on 10/11/2017.
  */
-public class Reviewer {
+public class ReviewerModel {
     private int id;
     private String firstname;
     private String lastname;

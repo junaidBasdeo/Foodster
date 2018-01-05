@@ -1,0 +1,32 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.example.junaid.foodster.MainActivity" >
+
+    <item android:id="@+id/addUserMenuOption"
+        android:title="@string/addUser"
+        android:icon="@android:drawable/ic_input_add"
+        app:showAsAction="ifRoom|withText"/>
+
+    <item android:id="@+id/changeUserTypeMenuOption"
+        android:title="@string/changeUserType"
+        android:icon="@android:drawable/ic_menu_set_as"
+        app:showAsAction="ifRoom|withText" />
+
+    <item android:id="@+id/changeUserPasswordMenuOption"
+        android:title="@string/changeUserPassword"
+        android:icon="@android:drawable/ic_partial_secure"
+        app:showAsAction="ifRoom|withText" />
+
+
+    <item android:id="@+id/searchMenuOption"
+        android:title="@string/searchRestaurants"
+        android:icon="@android:drawable/ic_menu_search"
+        app:showAsAction="ifRoom|withText" />
+
+
+    <item android:id="@+id/exit"
+        android:title="@string/exitApp"
+        android:icon="@android:drawable/ic_lock_power_off"
+        app:showAsAction="ifRoom|withText" />
+</menu>

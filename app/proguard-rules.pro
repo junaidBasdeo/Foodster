@@ -15,3 +15,6 @@
 #-keepclassmembers class fqcn.of.javascript.interface.for.webview {
 #   public *;
 #}
+-keep public interface android.support.test.espresso.IdlingResource$ResourceCallback {*;}
+-dontwarn okio.**
+

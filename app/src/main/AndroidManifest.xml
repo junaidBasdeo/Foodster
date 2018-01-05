@@ -3,6 +3,7 @@
     package="com.example.junaid.foodster">
 
     <uses-permission android:name="android.permission.INTERNET"/>
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
 
     <application
         android:allowBackup="true"
@@ -18,7 +19,34 @@
             </intent-filter>
         </activity>
         <activity android:name=".Signup" />
-        <activity android:name=".Resturant"></activity>
-    </application>
+        <activity android:name=".BusinessListActivity"></activity>
 
+        <activity
+            android:name=".AddUserActivity"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+        <activity
+            android:name=".ChangeUserPasswordActivity"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+         <activity
+            android:name=".ChangeUserTypeActivity"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+        <activity
+            android:name=".Login"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+        <activity
+            android:name=".YelpSearchActivity"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+        <activity
+            android:name=".ReviewListActivity"
+            android:configChanges="orientation|screenSize"
+            ></activity>
+    <activity
+        android:name=".LocalReviewActivity"
+        android:configChanges="orientation|screenSize"
+        ></activity>    </application>
 </manifest>

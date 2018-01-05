@@ -36,7 +36,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:textAppearance="?android:attr/textAppearanceMedium"
-        android:text="USERNAME"
+        android:text="@string/username"
         android:id="@+id/textView6" />
 
     <EditText
@@ -88,6 +88,11 @@
         android:id="@+id/addUser"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:onClick="onSignupClick"
         android:text="Signup" />
+
+    <Button
+        android:id="@+id/signoninstead"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Signon" />
 </LinearLayout>

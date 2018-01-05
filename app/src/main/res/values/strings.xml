@@ -1,3 +1,116 @@
 <resources>
     <string name="app_name">Foodster</string>
+    <string name="username">USERNAME</string>
+    <string name="addUser">Add A User</string>
+    <string name="changeUserType">Change User Type</string>
+    <string name="changeUserPassword">Change User Type</string>
+    <string name="refreshRestaurants">Refresh Restaurant Data</string>
+    <string name="searchRestaurants">Search Restaurant Data</string>
+    <string name="removeUser">Remove User</string>
+    <string name="refreshRestaurantData">Refresh Restaurants</string>
+    <string name="exitApp">LogOff and Exit</string>
+
+
+    <string-array name="month_values">
+        <item>"01"</item>
+        <item>"02"</item>
+        <item>"03"</item>
+        <item>"04"</item>
+        <item>"05"</item>
+        <item>"06"</item>
+        <item>"07"</item>
+        <item>"08"</item>
+        <item>"09"</item>
+        <item>"10"</item>
+        <item>"11"</item>
+        <item>"12"</item>
+    </string-array>
+
+    <string-array name="year_values">
+        <item>"2016"</item>
+        <item>"2017"</item>
+        <item>"2018"</item>
+        <item>"2019"</item>
+        <item>"2020"</item>
+        <item>"2021"</item>
+        <item>"2022"</item>
+        <item>"2023"</item>
+    </string-array>
+
+    <string-array name="us_states">
+        <item>"Alabama - AL"</item>
+        <item>"Alaska - AK"</item>
+        <item>"Arizona - AZ"</item>
+        <item>"Arkansas - AR"</item>
+        <item>"California - CA"</item>
+        <item>"Colorado - CO"</item>
+        <item>"Connecticut - CT"</item>
+        <item>"Delaware - DE"</item>
+        <item>"Florida - FL"</item>
+        <item>"Georgia - GA"</item>
+        <item>"Hawaii - HI"</item>
+        <item>"Idaho - ID"</item>
+        <item>"Illinois - IL"</item>
+        <item>"Indiana - IN"</item>
+        <item>"Iowa - IA"</item>
+        <item>"Kansas - KS"</item>
+        <item>"Kentucky - KY"</item>
+        <item>"Louisiana - LA"</item>
+        <item>"Maine - ME"</item>
+        <item>"Maryland - MD"</item>
+        <item>"Massachusetts - MA"</item>
+        <item>"Michigan - MI"</item>
+        <item>"Minnesota - MN"</item>
+        <item>"Mississippi - MS"</item>
+        <item>"Missouri - MO"</item>
+        <item>"Montana - MT"</item>
+        <item>"Nebraska - NE"</item>
+        <item>"Nevada - NV"</item>
+        <item>"New Hampshire - NH"</item>
+        <item>"New Jersey - NJ"</item>
+        <item>"New Mexico - NM"</item>
+        <item>"New York - NY"</item>
+        <item>"North Carolina - NC"</item>
+        <item>"North Dakota - ND"</item>
+        <item>"Ohio - OH"</item>
+        <item>"Oklahoma - OK"</item>
+        <item>"Oregon - OR"</item>
+        <item>"Pennsylvania - PA"</item>
+        <item>"Rhode Island - RI"</item>
+        <item>"South Carolina - SC"</item>
+        <item>"South Dakota - SD"</item>
+        <item>"Tennessee - TN"</item>
+        <item>"Texas - TX"</item>
+        <item>"Utah - UT"</item>
+        <item>"Vermont - VT"</item>
+        <item>"Virginia - VA"</item>
+        <item>"Washington - WA"</item>
+        <item>"West Virginia - WV"</item>
+        <item>"Wisconsin - WI"</item>
+        <item>"Wyoming - WY"</item>
+        <item>"Commonwealth/Territory: - Abbreviation:"</item>
+        <item>"American Samoa - AS"</item>
+        <item>"District of Columbia - DC"</item>
+        <item>"Federated States of Micronesia - FM"</item>
+        <item>"Guam - GU"</item>
+        <item>"Marshall Islands - MH"</item>
+        <item>"Northern Mariana Islands - MP"</item>
+        <item>"Palau - PW"</item>
+        <item>"Puerto Rico - PR"</item>
+        <item>"Virgin Islands - VI"</item>
+        <item>"Military "State": - Abbreviation:"</item>
+        <item>"Armed Forces Africa - AE"</item>
+        <item>"Armed Forces Americas - AA"</item>
+        <item>"Armed Forces Canada - AE"</item>
+        <item>"Armed Forces Europe - AE"</item>
+        <item>"Armed Forces Middle East - AE"</item>
+        <item>"Armed Forces Pacific - AP"</item>
+    </string-array>
+    <string-array name="user_type">
+        <item>Administrator</item>
+        <item>User - With Transactions</item>
+        <item>User - No Transactions</item>
+        <item>Guest</item>
+    </string-array>
+
 </resources>
